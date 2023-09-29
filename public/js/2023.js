@@ -1,3 +1,7 @@
+Chart.register(ChartDataLabels);
+
+Chart.overrides.pie;
+
 const schoolFunctionChart = document.getElementById("schoolFunctionChart");
 
 new Chart(schoolFunctionChart, {
@@ -33,13 +37,29 @@ new Chart(schoolFunctionChart, {
   },
   options: {
     responsive: true,
+    // events: [],
     plugins: {
+      tooltip: {
+        enabled: false,
+      },
       legend: {
         position: "right",
         display: false,
       },
       title: {
         display: false,
+      },
+      datalabels: {
+        formatter: (value, ctx) => {
+          let sum = 0;
+          let dataArr = ctx.chart.data.datasets[0].data;
+          dataArr.map((data) => {
+            sum += data;
+          });
+          let percentage = ((value * 100) / sum).toFixed(2) + "%";
+          return percentage;
+        },
+        color: "#fff",
       },
     },
     layout: {
@@ -66,12 +86,27 @@ new Chart(genderChart, {
   options: {
     responsive: true,
     plugins: {
+      tooltip: {
+        enabled: false,
+      },
       legend: {
         position: "right",
         display: false,
       },
       title: {
         display: false,
+      },
+      datalabels: {
+        formatter: (value, ctx) => {
+          let sum = 0;
+          let dataArr = ctx.chart.data.datasets[0].data;
+          dataArr.map((data) => {
+            sum += data;
+          });
+          let percentage = ((value * 100) / sum).toFixed(2) + "%";
+          return percentage;
+        },
+        color: "#fff",
       },
     },
     layout: {
@@ -110,12 +145,27 @@ new Chart(orientationChart, {
   options: {
     responsive: true,
     plugins: {
+      tooltip: {
+        enabled: false,
+      },
       legend: {
         position: "right",
         display: false,
       },
       title: {
         display: false,
+      },
+      datalabels: {
+        formatter: (value, ctx) => {
+          let sum = 0;
+          let dataArr = ctx.chart.data.datasets[0].data;
+          dataArr.map((data) => {
+            sum += data;
+          });
+          let percentage = ((value * 100) / sum).toFixed(2) + "%";
+          return percentage;
+        },
+        color: "#fff",
       },
     },
     layout: {
