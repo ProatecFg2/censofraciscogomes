@@ -77,7 +77,7 @@ new Chart(genderChart, {
     datasets: [
       {
         data: [246.942, 291.058],
-        backgroundColor: ["rgba(255, 99, 132, 1)", "rgba(255, 159, 64, 1)"],
+        backgroundColor: ["rgba(255, 159, 64, 1)", "rgba(255, 99, 132, 1)"],
         borderWidth: 1,
         hoverOffset: 15,
       },
