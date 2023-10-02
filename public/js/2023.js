@@ -123,7 +123,7 @@ new Chart(ageChart, {
     labels: ["10 anos", "11 anos", "12 anos", "13 anos", "14 anos", "15 anos"],
     datasets: [
       {
-        data: [246.942, 291.058],
+        data: [0, 0, 5, 10, 50, 250],
         backgroundColor: ["rgba(255, 159, 64, 1)", "rgba(255, 99, 132, 1)", "#D36135", "#F42C04", "#88A2AA", "#F93943"],
         borderWidth: 1,
         hoverOffset: 15,
