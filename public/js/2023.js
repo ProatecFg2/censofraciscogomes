@@ -19,7 +19,7 @@ new Chart(schoolFunctionChart, {
     ],
     datasets: [
       {
-        data: [12, 19, 3, 5, 2, 3, 4, 6],
+        data: [81.776, 85.004, 52.186, 83.928, 90.922, 61.87, 48.958, 32.818],
         backgroundColor: [
           "rgba(255, 99, 132, 1)",
           "rgba(255, 159, 64, 1)",
