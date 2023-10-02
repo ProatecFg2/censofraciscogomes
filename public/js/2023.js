@@ -76,7 +76,7 @@ new Chart(genderChart, {
     labels: ["Masculino", "Feminino"],
     datasets: [
       {
-        data: [12, 19],
+        data: [246.942, 291.058],
         backgroundColor: ["rgba(255, 99, 132, 1)", "rgba(255, 159, 64, 1)"],
         borderWidth: 1,
         hoverOffset: 15,
