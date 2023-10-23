@@ -187,13 +187,12 @@ new Chart(studyChart, {
     ],
     datasets: [
       {
-        data: [12, 19, 3, 5, 2],
+        data: [270.076, 187.762, 75.858, 4.304],
         backgroundColor: [
           "rgba(255, 99, 132, 1)",
           "rgba(255, 159, 64, 1)",
           "rgba(255, 205, 86, 1)",
           "rgba(75, 192, 192, 1)",
-          "rgba(54, 162, 235, 1)",
         ],
         borderWidth: 1,
         hoverOffset: 15,
