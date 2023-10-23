@@ -173,3 +173,61 @@ new Chart(orientationChart, {
     },
   },
 });
+
+const studyChart = document.getElementById("studyChart");
+
+new Chart(studyChart, {
+  type: "pie",
+  data: {
+    labels: [
+      "Matutino",
+      "Vespertino",
+      "Noite",
+      "Período Integral",
+    ],
+    datasets: [
+      {
+        data: [12, 19, 3, 5, 2],
+        backgroundColor: [
+          "rgba(255, 99, 132, 1)",
+          "rgba(255, 159, 64, 1)",
+          "rgba(255, 205, 86, 1)",
+          "rgba(75, 192, 192, 1)",
+          "rgba(54, 162, 235, 1)",
+        ],
+        borderWidth: 1,
+        hoverOffset: 15,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      tooltip: {
+        enabled: false,
+      },
+      legend: {
+        position: "right",
+        display: false,
+      },
+      title: {
+        display: false,
+      },
+      datalabels: {
+        formatter: (value, ctx) => {
+          let sum = 0;
+          let dataArr = ctx.chart.data.datasets[0].data;
+          dataArr.map((data) => {
+            sum += data;
+          });
+          let percentage = ((value * 100) / sum).toFixed(2) + "%";
+          return percentage;
+        },
+        color: "#fff",
+      },
+    },
+    layout: {
+      padding: 15,
+    },
+  },
+});
