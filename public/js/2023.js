@@ -115,53 +115,6 @@ new Chart(genderChart, {
   },
 });
 
-const ageChart = document.getElementById("ageChart");
-
-new Chart(ageChart, {
-  type: "pie",
-  data: {
-    labels: ["10 anos", "11 anos", "12 anos", "13 anos", "14 anos", "15 anos"],
-    datasets: [
-      {
-        data: [0, 0, 5, 10, 50, 250],
-        backgroundColor: ["rgba(255, 159, 64, 1)", "rgba(255, 99, 132, 1)", "#D36135", "#F42C04", "#88A2AA", "#F93943"],
-        borderWidth: 1,
-        hoverOffset: 15,
-      },
-    ],
-  },
-  options: {
-    responsive: true,
-    plugins: {
-      tooltip: {
-        enabled: false,
-      },
-      legend: {
-        position: "right",
-        display: false,
-      },
-      title: {
-        display: false,
-      },
-      datalabels: {
-        formatter: (value, ctx) => {
-          let sum = 0;
-          let dataArr = ctx.chart.data.datasets[0].data;
-          dataArr.map((data) => {
-            sum += data;
-          });
-          let percentage = ((value * 100) / sum).toFixed(2) + "%";
-          return percentage;
-        },
-        color: "#fff",
-      },
-    },
-    layout: {
-      padding: 15,
-    },
-  },
-});
-
 const orientationChart = document.getElementById("orientationChart");
 
 new Chart(orientationChart, {
