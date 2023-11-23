@@ -65,11 +65,91 @@ body {
 
 .page-subtitle {
 
+    position: relative;
+
     width: 100%;
 
-    font-size: 17px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 20px;
 
     text-align: left;
+
+}
+
+.page-subtitle::before {
+
+    content: "";
+
+    position: absolute;
+    top: calc(100% + 10px);
+
+    width: 50px;
+    height: 2px;
+
+    background: black;
+
+    border-radius: 100px;
+
+}
+
+.page-last-editions {
+
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 1.5rem 0;
+
+}
+
+.page-last-editions .single-edition {
+
+    width: 250px;
+    height: 300px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    text-decoration: none;
+
+    color: black;
+
+    border-radius: 7px;
+
+    box-shadow: 0px 0px 5px 0px #ccc;
+
+    transition: .3s;
+
+    overflow: hidden;
+
+}
+
+.single-edition:hover {
+
+    box-shadow: 0px 0px 10px 0px #ccc;
+
+}
+
+.single-edition img {
+
+    max-width: 100%;
+
+}
+
+.single-edition span {
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin: .7rem;
 
 }
 
@@ -83,11 +163,21 @@ body {
     align-items: center;
     flex-direction: column;
 
-    border-radius: 10px;
+    border-bottom: 1px solid #efefef;
+
+    /* border-radius: 10px; */
 
     margin-top: 20px;
 
     padding: 2rem 1rem;
+
+    transition: .3s;
+
+}
+
+.page-graph:hover {
+
+    box-shadow: 0px 0px 15px 0px #ccc;
 
 }
 
@@ -96,8 +186,10 @@ body {
     width: 100%;
 
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+
+    text-align: left    ;
 
     margin-top: 2rem;
 
@@ -105,7 +197,7 @@ body {
 
 .page-graph-content canvas {
 
-    max-width: 300px;
+    max-width: 700px;
     max-height: 300px;
 
 }

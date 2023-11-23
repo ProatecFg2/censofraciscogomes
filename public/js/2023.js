@@ -19,10 +19,10 @@ new Chart(schoolFunctionChart, {
     ],
     datasets: [
       {
-        data: [81.776, 85.004, 52.186, 83.928, 90.922, 61.87, 48.958, 32.818],
+        data: [82, 85, 52, 84, 91, 63, 49, 33],
         backgroundColor: [
-          "rgba(255, 99, 132, 1)",
           "rgba(255, 159, 64, 1)",
+          "rgba(255, 99, 132, 1)",
           "rgba(255, 205, 86, 1)",
           "rgba(75, 192, 192, 1)",
           "rgba(54, 162, 235, 1)",
@@ -40,11 +40,11 @@ new Chart(schoolFunctionChart, {
     // events: [],
     plugins: {
       tooltip: {
-        enabled: false,
+        enabled: true,
       },
       legend: {
         position: "right",
-        display: false,
+        display: true,
       },
       title: {
         display: false,
@@ -76,7 +76,7 @@ new Chart(genderChart, {
     labels: ["Masculino", "Feminino"],
     datasets: [
       {
-        data: [246.942, 291.058],
+        data: [248, 291],
         backgroundColor: ["rgba(255, 159, 64, 1)", "rgba(255, 99, 132, 1)"],
         borderWidth: 1,
         hoverOffset: 15,
@@ -87,11 +87,11 @@ new Chart(genderChart, {
     responsive: true,
     plugins: {
       tooltip: {
-        enabled: false,
+        enabled: true,
       },
       legend: {
         position: "right",
-        display: false,
+        display: true,
       },
       title: {
         display: false,
@@ -129,10 +129,10 @@ new Chart(orientationChart, {
     ],
     datasets: [
       {
-        data: [12, 19, 3, 5, 2],
+        data: [439, 16, 44, 36, 1],
         backgroundColor: [
-          "rgba(255, 99, 132, 1)",
           "rgba(255, 159, 64, 1)",
+          "rgba(255, 99, 132, 1)",
           "rgba(255, 205, 86, 1)",
           "rgba(75, 192, 192, 1)",
           "rgba(54, 162, 235, 1)",
@@ -146,11 +146,11 @@ new Chart(orientationChart, {
     responsive: true,
     plugins: {
       tooltip: {
-        enabled: false,
+        enabled: true,
       },
       legend: {
         position: "right",
-        display: false,
+        display: true,
       },
       title: {
         display: false,
@@ -174,26 +174,95 @@ new Chart(orientationChart, {
   },
 });
 
-const studyChart = document.getElementById("studyChart");
+const ageChart = document.getElementById("ageChart");
 
-new Chart(studyChart, {
+new Chart(ageChart, {
   type: "pie",
   data: {
     labels: [
-      "Matutino",
-      "Vespertino",
-      "Noite",
-      "Período Integral",
+      "10 anos",
+      "11 anos",
+      "12 anos",
+      "13 anos",
+      "14 anos",
+      "15 anos",
+      "16 anos",
+      "17 anos",
+      "18 anos",
+      "19 anos",
+      "20 anos",
+      "21 anos",
+      "22 anos",
+      "23 anos",
+      // "24 anos",
+      // "25 anos",
+      // "26 anos",
+      // "27 anos",
+      // "28 anos",
+      // "29 anos",
+      // "30 anos",
+      // "31 anos",
+      // "32 anos",
+      // "33 anos",
+      // "34 anos",
+      // "35 anos",
+      // "36 anos",
+      // "37 anos",
+      // "38 anos",
+      // "39 anos",
+      // "40 anos",
+      // "41 anos",
+      // "42 anos",
+      // "43 anos",
+      // "44 anos",
+      // "45 anos",
+      // "46 anos",
+      // "47 anos",
+      // "48 anos",
+      // "49 anos",
+      // "50 anos",
+      // "51 anos",
+      // "52 anos",
+      // "53 anos",
+      // "54 anos",
+      // "55 anos",
+      // "56 anos",
+      // "57 anos",
+      // "58 anos",
+      // "59 anos",
+      // "60 anos",
+      // "61 anos",
+      // "62 anos",
+      // "63 anos",
+      // "64 anos",
+      // "65 anos",
+      // "66 anos",
+      // "67 anos",
+      // "68 anos",
+      // "69 anos",
+      // "70 anos",
+      // "71 anos",
+      // "72 anos",
+      // "73 anos",
+      // "74 anos",
+      // "75 anos",
+      // "76 anos",
+      // "77 anos",
+      // "78 anos",
+      // "79 anos",
+      // "80 anos",
+      // "+ de 80 anos",
     ],
     datasets: [
       {
-        data: [270.076, 187.762, 75.858, 4.304],
-        backgroundColor: [
-          "rgba(255, 99, 132, 1)",
-          "rgba(255, 159, 64, 1)",
-          "rgba(255, 205, 86, 1)",
-          "rgba(75, 192, 192, 1)",
-        ],
+        data: [0, 31, 67, 65, 77, 85, 80, 72, 20, 5, 3, 0, 0, 1],
+        // backgroundColor: [
+        //   "rgba(255, 159, 64, 1)",
+        //   "rgba(255, 99, 132, 1)",
+        //   "rgba(255, 205, 86, 1)",
+        //   "rgba(75, 192, 192, 1)",
+        //   "rgba(54, 162, 235, 1)",
+        // ],
         borderWidth: 1,
         hoverOffset: 15,
       },
@@ -203,11 +272,11 @@ new Chart(studyChart, {
     responsive: true,
     plugins: {
       tooltip: {
-        enabled: false,
+        enabled: true,
       },
       legend: {
         position: "right",
-        display: false,
+        display: true,
       },
       title: {
         display: false,
@@ -230,3 +299,11 @@ new Chart(studyChart, {
     },
   },
 });
+
+// let frase;
+
+// for (var i = 24; i < 81; i++) {
+//   frase += '"' + i + " " + "anos" + '",' + "\n";
+// }
+
+// console.log(frase);
