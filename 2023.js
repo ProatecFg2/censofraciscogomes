@@ -308,6 +308,8 @@ new Chart(ageChart, {
 
 // console.log(frase);
 
+console.log(".");
+
 window.addEventListener("resize", () => {
 
   console.log(window.screen.width);
