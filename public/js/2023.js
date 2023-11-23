@@ -43,7 +43,7 @@ new Chart(schoolFunctionChart, {
         enabled: true,
       },
       legend: {
-        position: "right",
+        position: window.screen.width > 986 ? "right" : "bottom",
         display: true,
       },
       title: {
@@ -90,7 +90,7 @@ new Chart(genderChart, {
         enabled: true,
       },
       legend: {
-        position: "right",
+        position: window.screen.width > 986 ? "right" : "bottom",
         display: true,
       },
       title: {
@@ -149,7 +149,7 @@ new Chart(orientationChart, {
         enabled: true,
       },
       legend: {
-        position: "right",
+        position: window.screen.width > 986 ? "right" : "bottom",
         display: true,
       },
       title: {
@@ -275,7 +275,7 @@ new Chart(ageChart, {
         enabled: true,
       },
       legend: {
-        position: "right",
+        position: window.screen.width > 986 ? "right" : "bottom",
         display: true,
       },
       title: {
@@ -307,3 +307,11 @@ new Chart(ageChart, {
 // }
 
 // console.log(frase);
+
+console.log(".");
+
+window.addEventListener("resize", () => {
+
+  console.log(window.screen.width);
+
+});
