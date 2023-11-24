@@ -12,11 +12,26 @@
 
     <section class="content" id="content">
 
-        <div class="box-container">
+        <div class="page-logo">
+
+            <a href="/">
+
+                <img loading="lazy" src="/public/images/Logo Censo.png" alt="Logo Censo" referrerpolicy="no-referrer">
+
+            </a>
+        </div>
+
+        <div class="box-container" style="padding-top: 1rem;">
 
             <h1 class="page-title">Censo escolar Francisco Gomes 2023</h1>
 
-            <div class="page-graph">
+            <div class="total-people">
+
+                <span>Total de pessoas entrevistadas: 539</span>
+
+            </div>
+
+            <div class="page-graph" data-js="schoolFunctionChart">
 
                 <h2 class="page-subtitle">Qual sua função na Escola Estadual Professor Francisco Gomes?</h2>
 
@@ -24,55 +39,13 @@
 
                     <canvas id="schoolFunctionChart"></canvas>
 
-                    <!-- <div class="page-graph-options">
-
-                        <span class="single-graph-option" style="--i-bg: rgba(255, 99, 132, 1);">
-                            <div></div>
-                            Estudante do 6° Ano
-                        </span>
-
-                        <span class="single-graph-option" style="--i-bg: rgba(255, 159, 64, 1);">
-                            <div></div>
-                            Estudante do 7° Ano
-                        </span>
-
-                        <span class="single-graph-option" style="--i-bg: rgba(255, 205, 86, 1);">
-                            <div></div>
-                            Estudante do 8° Ano
-                        </span>
-
-                        <span class="single-graph-option" style="--i-bg: rgba(75, 192, 192, 1);">
-                            <div></div>
-                            Estudante do 9° Ano
-                        </span>
-
-                        <span class="single-graph-option" style="--i-bg: rgba(54, 162, 235, 1);">
-                            <div></div>
-                            Estudante da 1ª Série do Ensino Médio
-                        </span>
-
-                        <span class="single-graph-option" style="--i-bg: rgba(153, 102, 255, 1);">
-                            <div></div>
-                            Estudante da 2ª Série do Ensino Médio
-                        </span>
-
-                        <span class="single-graph-option" style="--i-bg: rgba(0, 100, 255, 1);">
-                            <div></div>
-                            Estudante da 3ª Série do Ensino Médio
-                        </span>
-
-                        <span class="single-graph-option" style="--i-bg: rgba(0, 255, 200);">
-                            <div></div>
-                            Funcionário
-                        </span>
-
-                    </div> -->
+                    <div class="page-graph-options"></div>
 
                 </div>
 
             </div>
 
-            <div class="page-graph">
+            <div class="page-graph" data-js="genderChart">
 
                 <h2 class="page-subtitle">Gênero</h2>
 
@@ -80,25 +53,13 @@
 
                     <canvas id="genderChart"></canvas>
 
-                    <!-- <div class="page-graph-options">
-
-                        <span class="single-graph-option" style="--i-bg: rgba(255, 99, 132, 1);">
-                            <div></div>
-                            Masculino
-                        </span>
-
-                        <span class="single-graph-option" style="--i-bg: rgba(255, 159, 64, 1);">
-                            <div></div>
-                            Feminino
-                        </span>
-
-                    </div> -->
+                    <div class="page-graph-options"></div>
 
                 </div>
 
             </div>
 
-            <div class="page-graph">
+            <div class="page-graph" data-js="orientationChart">
 
                 <h2 class="page-subtitle">Orientação Sexual</h2>
 
@@ -106,46 +67,148 @@
 
                     <canvas id="orientationChart"></canvas>
 
-                    <!-- <div class="page-graph-options">
-
-                        <span class="single-graph-option" style="--i-bg: rgba(255, 99, 132, 1);">
-                            <div></div>
-                            Heterossexual
-                        </span>
-
-                        <span class="single-graph-option" style="--i-bg: rgba(255, 159, 64, 1);">
-                            <div></div>
-                            Homossexual
-                        </span>
-
-                        <span class="single-graph-option" style="--i-bg: rgba(255, 205, 86, 1);">
-                            <div></div>
-                            Bissexual
-                        </span>
-
-                        <span class="single-graph-option" style="--i-bg: rgba(75, 192, 192, 1);">
-                            <div></div>
-                            Prefere não responder
-                        </span>
-
-                        <span class="single-graph-option" style="--i-bg: rgba(54, 162, 235, 1);">
-                            <div></div>
-                            Outro
-                        </span>
-
-                    </div> -->
+                    <div class="page-graph-options"></div>
 
                 </div>
 
             </div>
 
-            <div class="page-graph">
+            <div class="page-graph" data-js="ageChart">
 
                 <h2 class="page-subtitle">Qual a sua faixa etária?</h2>
 
                 <div class="page-graph-content">
 
                     <canvas id="ageChart"></canvas>
+
+                    <div class="page-graph-options"></div>
+
+                </div>
+
+            </div>
+
+            <div class="page-graph" data-js="raceChart">
+
+                <h2 class="page-subtitle">Você se considera uma pessoa:</h2>
+
+                <div class="page-graph-content">
+
+                    <canvas id="raceChart"></canvas>
+
+                    <div class="page-graph-options"></div>
+
+                </div>
+
+            </div>
+
+            <div class="page-graph" data-js="religionChart">
+
+                <h2 class="page-subtitle">Qual sua religião:</h2>
+
+                <div class="page-graph-content">
+
+                    <canvas id="religionChart"></canvas>
+
+                    <div class="page-graph-options"></div>
+
+                </div>
+
+            </div>
+
+            <div class="page-graph" data-js="educationChart">
+
+                <h2 class="page-subtitle">Grau de escolaridade:</h2>
+
+                <div class="page-graph-content">
+
+                    <canvas id="educationChart"></canvas>
+
+                    <div class="page-graph-options"></div>
+
+                </div>
+
+            </div>
+
+            <div class="page-graph" data-js="periodChart">
+
+                <h2 class="page-subtitle">Período em que estuda ou trabalha:</h2>
+
+                <div class="page-graph-content">
+
+                    <canvas id="periodChart"></canvas>
+
+                    <div class="page-graph-options"></div>
+
+                </div>
+
+            </div>
+
+            <div class="page-graph" data-js="cityChart">
+
+                <h2 class="page-subtitle">Qual cidade reside:</h2>
+
+                <div class="page-graph-content">
+
+                    <canvas id="cityChart"></canvas>
+
+                    <div class="page-graph-options"></div>
+
+                </div>
+
+            </div>
+
+            <div class="page-graph" data-js="districtChart">
+
+                <h2 class="page-subtitle">APENAS PARA MORADORES DE CRAVINHOS - Qual bairro reside:</h2>
+
+                <div class="page-graph-content">
+
+                    <canvas id="districtChart"></canvas>
+
+                    <div class="page-graph-options"></div>
+
+                </div>
+
+            </div>
+
+            <div class="page-graph" data-js="moneyChart">
+
+                <h2 class="page-subtitle">Qual a faixa de randa familiar mensal (considerando todas as pessoas que
+                    trabalham na residência);</h2>
+
+                <div class="page-graph-content">
+
+                    <canvas id="moneyChart"></canvas>
+
+                    <div class="page-graph-options"></div>
+
+                </div>
+
+            </div>
+
+            <div class="page-graph" data-js="familyMoneyChart">
+
+                <h2 class="page-subtitle">Quantas pessoas trabalham para compor essa renda familiar:</h2>
+
+                <div class="page-graph-content">
+
+                    <canvas id="familyMoneyChart"></canvas>
+
+                    <div class="page-graph-options"></div>
+
+                </div>
+
+            </div>
+
+            <div class="page-graph" data-js="familyLiveChart">
+
+                <h2 class="page-subtitle">Quantas pessoas vivem dssa renda familiar:</h2>
+
+                <div class="page-graph-content">
+
+                    <canvas id="familyLiveChart"></canvas>
+
+                    <div class="page-graph-options"></div>
 
                 </div>
 
