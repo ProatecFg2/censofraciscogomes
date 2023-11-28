@@ -221,6 +221,14 @@ body {
 
 }
 
+.single-edition small {
+
+    font-size: 13px;
+
+    margin: 0 .7rem;
+
+}
+
 .page-graph {
 
     width: 100%;
@@ -304,7 +312,8 @@ body {
 
 .single-graph-option div {
 
-    width: 40px;
+    min-width: 40px;
+    max-width: 40px;
     height: 12px;
 
     /* background: var(--i-bg); */

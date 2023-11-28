@@ -1059,3 +1059,603 @@ labels.forEach((l) => {
 });
 
 // -----------------------------------------------------
+
+// -------------------- Family Main Chart ----------------------
+
+data = [184, 266, 2, 29, 20, 7, 3, 5, 3];
+
+labels = ["Mãe", "Pai", "Madrasta", "Padrasto", "O Próprio entrevistado", "Vó", "Tio", "Vô"];
+
+const familyMainChart = document.getElementById("familyMainChart");
+
+new Chart(familyMainChart, {
+  type: "pie",
+  data: {
+    labels: labels,
+    datasets: [
+      {
+        data: data,
+        backgroundColor: bgColors,
+        borderWidth: borderWidth,
+        hoverOffset: 15,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      tooltip: {
+        enabled: true,
+      },
+      legend: {
+        position: window.screen.width > 986 ? "right" : "bottom",
+        display: false,
+        align: "left",
+      },
+      title: {
+        display: false,
+      },
+      datalabels: {
+        formatter: (value, ctx) => {
+          let sum = 0;
+          let dataArr = ctx.chart.data.datasets[0].data;
+          dataArr.map((data) => {
+            sum += data;
+          });
+          let percentage = ((value * 100) / sum).toFixed(2) + "%";
+          return percentage;
+        },
+        color: "#fff",
+      },
+    },
+    layout: {
+      padding: 15,
+    },
+  },
+});
+
+document.querySelector("[data-js='familyMainChart'] .page-graph-options").innerHTML = "";
+
+counter = 1;
+
+labels.forEach((l) => {
+  counter > 7 ? (counter = 1) : (counter = counter);
+
+  document.querySelector("[data-js='familyMainChart'] .page-graph-options").innerHTML += `
+  
+    <span class="single-graph-option">
+      <div style="background-color: var(--graph-${counter});"></div>
+      ${l}
+    </span>
+  
+  `;
+
+  counter++;
+});
+
+// -----------------------------------------------------
+
+// -------------------- Work Chart ----------------------
+
+data = [3, 25, 2, 39, 33, 11, 18, 4, 12, 7, 338];
+
+labels = ["Na agricultura, no campo, na fazenda ou na pesca.", "Na indústria.", "Na construção civil.", "No comércio, banco, transporte, hotelaria ou outros serviços.", "Como funcionário(a) do governo federal, estadual ou municipal.", "Como profissional liberal, professora ou técnica de nível superior.", "Trabalho fora de casa em atividades informais (pintor, eletricista, encanador, feirante, ambulante, guardador/a de carros, catador/a de lixo).", "Tabalho em minha casa informalmente (costura, aulas particulares, cozinha, artesanato, carpintaria ect.).", "Faço trabalho doméstico em casa de outras pessoas (cozinheiro/a, mordomo/governanta, jardineiro, babá, lavadeira, faxineiro/a, acompanhante de idosos/as etc.).", "No lar(sem remuneração).", "Não trabalho."];
+
+const workChart = document.getElementById("workChart");
+
+new Chart(workChart, {
+  type: "pie",
+  data: {
+    labels: labels,
+    datasets: [
+      {
+        data: data,
+        backgroundColor: bgColors,
+        borderWidth: borderWidth,
+        hoverOffset: 15,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      tooltip: {
+        enabled: true,
+      },
+      legend: {
+        position: window.screen.width > 986 ? "right" : "bottom",
+        display: false,
+        align: "left",
+      },
+      title: {
+        display: false,
+      },
+      datalabels: {
+        formatter: (value, ctx) => {
+          let sum = 0;
+          let dataArr = ctx.chart.data.datasets[0].data;
+          dataArr.map((data) => {
+            sum += data;
+          });
+          let percentage = ((value * 100) / sum).toFixed(2) + "%";
+          return percentage;
+        },
+        color: "#fff",
+      },
+    },
+    layout: {
+      padding: 15,
+    },
+  },
+});
+
+document.querySelector("[data-js='workChart'] .page-graph-options").innerHTML = "";
+
+counter = 1;
+
+labels.forEach((l) => {
+  counter > 7 ? (counter = 1) : (counter = counter);
+
+  document.querySelector("[data-js='workChart'] .page-graph-options").innerHTML += `
+  
+    <span class="single-graph-option">
+      <div style="background-color: var(--graph-${counter});"></div>
+      ${l}
+    </span>
+  
+  `;
+
+  counter++;
+});
+
+// -----------------------------------------------------
+
+// -------------------- Medical Chart ----------------------
+
+data = [143, 48, 111, 237];
+
+labels = ["Sim, médico", "Sim, odontológico", "Sim, ambos", "Nenhum"];
+
+const medicalChart = document.getElementById("medicalChart");
+
+new Chart(medicalChart, {
+  type: "pie",
+  data: {
+    labels: labels,
+    datasets: [
+      {
+        data: data,
+        backgroundColor: bgColors,
+        borderWidth: borderWidth,
+        hoverOffset: 15,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      tooltip: {
+        enabled: true,
+      },
+      legend: {
+        position: window.screen.width > 986 ? "right" : "bottom",
+        display: false,
+        align: "left",
+      },
+      title: {
+        display: false,
+      },
+      datalabels: {
+        formatter: (value, ctx) => {
+          let sum = 0;
+          let dataArr = ctx.chart.data.datasets[0].data;
+          dataArr.map((data) => {
+            sum += data;
+          });
+          let percentage = ((value * 100) / sum).toFixed(2) + "%";
+          return percentage;
+        },
+        color: "#fff",
+      },
+    },
+    layout: {
+      padding: 15,
+    },
+  },
+});
+
+document.querySelector("[data-js='medicalChart'] .page-graph-options").innerHTML = "";
+
+counter = 1;
+
+labels.forEach((l) => {
+  counter > 7 ? (counter = 1) : (counter = counter);
+
+  document.querySelector("[data-js='medicalChart'] .page-graph-options").innerHTML += `
+  
+    <span class="single-graph-option">
+      <div style="background-color: var(--graph-${counter});"></div>
+      ${l}
+    </span>
+  
+  `;
+
+  counter++;
+});
+
+// -----------------------------------------------------
+
+// -------------------- House Type Chart ----------------------
+
+data = [309, 56, 167, 7];
+
+labels = ["Próprio quitado", "Próprio financiado", "Alugado", "Concedido por empréstimo por terceiros"];
+
+const houseTypeChart = document.getElementById("houseTypeChart");
+
+new Chart(houseTypeChart, {
+  type: "pie",
+  data: {
+    labels: labels,
+    datasets: [
+      {
+        data: data,
+        backgroundColor: bgColors,
+        borderWidth: borderWidth,
+        hoverOffset: 15,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      tooltip: {
+        enabled: true,
+      },
+      legend: {
+        position: window.screen.width > 986 ? "right" : "bottom",
+        display: false,
+        align: "left",
+      },
+      title: {
+        display: false,
+      },
+      datalabels: {
+        formatter: (value, ctx) => {
+          let sum = 0;
+          let dataArr = ctx.chart.data.datasets[0].data;
+          dataArr.map((data) => {
+            sum += data;
+          });
+          let percentage = ((value * 100) / sum).toFixed(2) + "%";
+          return percentage;
+        },
+        color: "#fff",
+      },
+    },
+    layout: {
+      padding: 15,
+    },
+  },
+});
+
+document.querySelector("[data-js='houseTypeChart'] .page-graph-options").innerHTML = "";
+
+counter = 1;
+
+labels.forEach((l) => {
+  counter > 7 ? (counter = 1) : (counter = counter);
+
+  document.querySelector("[data-js='houseTypeChart'] .page-graph-options").innerHTML += `
+  
+    <span class="single-graph-option">
+      <div style="background-color: var(--graph-${counter});"></div>
+      ${l}
+    </span>
+  
+  `;
+
+  counter++;
+});
+
+// -----------------------------------------------------
+
+// -------------------- House Rooms Chart ----------------------
+
+data = [1, 5, 14, 32, 147, 122, 89, 57, 38, 34];
+
+labels = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10 ou mais"];
+
+const houseRoomsChart = document.getElementById("houseRoomsChart");
+
+new Chart(houseRoomsChart, {
+  type: "pie",
+  data: {
+    labels: labels,
+    datasets: [
+      {
+        data: data,
+        backgroundColor: bgColors,
+        borderWidth: borderWidth,
+        hoverOffset: 15,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      tooltip: {
+        enabled: true,
+      },
+      legend: {
+        position: window.screen.width > 986 ? "right" : "bottom",
+        display: false,
+        align: "left",
+      },
+      title: {
+        display: false,
+      },
+      datalabels: {
+        formatter: (value, ctx) => {
+          let sum = 0;
+          let dataArr = ctx.chart.data.datasets[0].data;
+          dataArr.map((data) => {
+            sum += data;
+          });
+          let percentage = ((value * 100) / sum).toFixed(2) + "%";
+          return percentage;
+        },
+        color: "#fff",
+      },
+    },
+    layout: {
+      padding: 15,
+    },
+  },
+});
+
+document.querySelector("[data-js='houseRoomsChart'] .page-graph-options").innerHTML = "";
+
+counter = 1;
+
+labels.forEach((l) => {
+  counter > 7 ? (counter = 1) : (counter = counter);
+
+  document.querySelector("[data-js='houseRoomsChart'] .page-graph-options").innerHTML += `
+  
+    <span class="single-graph-option">
+      <div style="background-color: var(--graph-${counter});"></div>
+      ${l}
+    </span>
+  
+  `;
+
+  counter++;
+});
+
+// -----------------------------------------------------
+
+// -------------------- Special Chart ----------------------
+
+data = [29, 2, 1, 1, 506];
+
+labels = ["1", "2", "3", "4 ou mais", "Não há pessoa com deficiência na casa."];
+
+const specialChart = document.getElementById("specialChart");
+
+new Chart(specialChart, {
+  type: "pie",
+  data: {
+    labels: labels,
+    datasets: [
+      {
+        data: data,
+        backgroundColor: bgColors,
+        borderWidth: borderWidth,
+        hoverOffset: 15,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      tooltip: {
+        enabled: true,
+      },
+      legend: {
+        position: window.screen.width > 986 ? "right" : "bottom",
+        display: false,
+        align: "left",
+      },
+      title: {
+        display: false,
+      },
+      datalabels: {
+        formatter: (value, ctx) => {
+          let sum = 0;
+          let dataArr = ctx.chart.data.datasets[0].data;
+          dataArr.map((data) => {
+            sum += data;
+          });
+          let percentage = ((value * 100) / sum).toFixed(2) + "%";
+          return percentage;
+        },
+        color: "#fff",
+      },
+    },
+    layout: {
+      padding: 15,
+    },
+  },
+});
+
+document.querySelector("[data-js='specialChart'] .page-graph-options").innerHTML = "";
+
+counter = 1;
+
+labels.forEach((l) => {
+  counter > 7 ? (counter = 1) : (counter = counter);
+
+  document.querySelector("[data-js='specialChart'] .page-graph-options").innerHTML += `
+  
+    <span class="single-graph-option">
+      <div style="background-color: var(--graph-${counter});"></div>
+      ${l}
+    </span>
+  
+  `;
+
+  counter++;
+});
+
+// -----------------------------------------------------
+
+// -------------------- Internet Access Chart ----------------------
+
+data = [513, 6, 14, 4, 2];
+
+labels = ["Wi-Fi wm casa", "Wi-Fi de terceiros (vizinhos, empresa, bairro)", "Chip no celular", "Internet cabeada", "Não tenho acesso à Internet"];
+
+const internetAccessChart = document.getElementById("internetAccessChart");
+
+new Chart(internetAccessChart, {
+  type: "pie",
+  data: {
+    labels: labels,
+    datasets: [
+      {
+        data: data,
+        backgroundColor: bgColors,
+        borderWidth: borderWidth,
+        hoverOffset: 15,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      tooltip: {
+        enabled: true,
+      },
+      legend: {
+        position: window.screen.width > 986 ? "right" : "bottom",
+        display: false,
+        align: "left",
+      },
+      title: {
+        display: false,
+      },
+      datalabels: {
+        formatter: (value, ctx) => {
+          let sum = 0;
+          let dataArr = ctx.chart.data.datasets[0].data;
+          dataArr.map((data) => {
+            sum += data;
+          });
+          let percentage = ((value * 100) / sum).toFixed(2) + "%";
+          return percentage;
+        },
+        color: "#fff",
+      },
+    },
+    layout: {
+      padding: 15,
+    },
+  },
+});
+
+document.querySelector("[data-js='internetAccessChart'] .page-graph-options").innerHTML = "";
+
+counter = 1;
+
+labels.forEach((l) => {
+  counter > 7 ? (counter = 1) : (counter = counter);
+
+  document.querySelector("[data-js='internetAccessChart'] .page-graph-options").innerHTML += `
+  
+    <span class="single-graph-option">
+      <div style="background-color: var(--graph-${counter});"></div>
+      ${l}
+    </span>
+  
+  `;
+
+  counter++;
+});
+
+// -----------------------------------------------------
+
+// -------------------- Transport Chart ----------------------
+
+data = [430, 3, 44, 18, 11, 33];
+
+labels = ["Carro próprio", "Carro alugado ou concedido", "Ônibus", "Moto", "Bicicleta", "Locomoção a pé"];
+
+const transportChart = document.getElementById("transportChart");
+
+new Chart(transportChart, {
+  type: "pie",
+  data: {
+    labels: labels,
+    datasets: [
+      {
+        data: data,
+        backgroundColor: bgColors,
+        borderWidth: borderWidth,
+        hoverOffset: 15,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      tooltip: {
+        enabled: true,
+      },
+      legend: {
+        position: window.screen.width > 986 ? "right" : "bottom",
+        display: false,
+        align: "left",
+      },
+      title: {
+        display: false,
+      },
+      datalabels: {
+        formatter: (value, ctx) => {
+          let sum = 0;
+          let dataArr = ctx.chart.data.datasets[0].data;
+          dataArr.map((data) => {
+            sum += data;
+          });
+          let percentage = ((value * 100) / sum).toFixed(2) + "%";
+          return percentage;
+        },
+        color: "#fff",
+      },
+    },
+    layout: {
+      padding: 15,
+    },
+  },
+});
+
+document.querySelector("[data-js='transportChart'] .page-graph-options").innerHTML = "";
+
+counter = 1;
+
+labels.forEach((l) => {
+  counter > 7 ? (counter = 1) : (counter = counter);
+
+  document.querySelector("[data-js='transportChart'] .page-graph-options").innerHTML += `
+  
+    <span class="single-graph-option">
+      <div style="background-color: var(--graph-${counter});"></div>
+      ${l}
+    </span>
+  
+  `;
+
+  counter++;
+});
+
+// -----------------------------------------------------
