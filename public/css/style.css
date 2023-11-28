@@ -34,7 +34,7 @@ body {
 
 body {
 
-    /* background: #f5f5f5; */
+    background: #f5f5f5;
 
     overflow-x: hidden;
 
@@ -60,8 +60,25 @@ body {
     align-items: center;
     flex-direction: column;
 
+    background: white;
+
     padding: 1rem;
     padding-top: 50px;
+
+}
+
+header {
+
+    width: 100%;
+    min-height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #3192d3;
+
+    overflow: hidden;
 
 }
 
@@ -89,6 +106,73 @@ body {
 
     max-width: 100px;
     max-height: 100px;
+
+}
+
+.page-banner {
+
+    width: 100%;
+    min-height: 450px;
+    max-height: 450px;
+
+    background-image: url('/public/images/banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    object-fit: cover;
+
+}
+
+.page-breadcrumbs {
+
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.page-breadcrumbs a {
+
+    color: #3192d3;
+
+    text-decoration: none;
+
+}
+
+.page-breadcrumbs a:hover {
+
+    text-decoration: underline;
+
+}
+
+.page-breadcrumbs a,
+.page-breadcrumbs span {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-right: 25px;
+        
+}
+
+.page-breadcrumbs span::before {
+
+    content: ">";
+
+    position: absolute;
+    left: -17px;
+
+    pointer-events: none;
+
+    user-select: none;
 
 }
 
@@ -148,15 +232,18 @@ body {
 
 .total-people span {
 
+    font-size: 15px;
     font-weight: bold;
 
-    color: white;
+    /* color: white; */
 
-    background: #3192d3;
+    color: #3192d3;
 
-    border-radius: 5px;
+    /* background: #3192d3; */
 
-    padding: .7rem 1rem;
+    /* border-radius: 5px; */
+
+    /* padding: .7rem 1rem; */
 
 }
 
@@ -226,6 +313,39 @@ body {
     font-size: 13px;
 
     margin: 0 .7rem;
+
+}
+
+.view-project {
+
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: 1.5rem 0
+
+}
+
+.view-project a {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    text-decoration: none;
+    
+    background: #3192d3;
+
+    border-radius: 5px;
+
+    padding: .7rem 1.5rem;
 
 }
 
@@ -322,7 +442,25 @@ body {
 
 }
 
+@media (max-width: 986px) {
+
+    .page-banner {
+
+        min-height: 200px;
+        max-height: 200px;
+
+    }
+
+}
+
 @media (max-width: 768px) {
+
+    .page-banner {
+
+        min-height: 150px;
+        max-height: 150px;
+
+    }
 
     .page-title {
 
